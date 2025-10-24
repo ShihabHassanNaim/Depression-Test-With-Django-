@@ -3,9 +3,9 @@ services:
     name: depression-api
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn MyPractice.wsgi:application
+    startCommand: gunicorn depression_api.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
-        value: myproject.settings
+        value: depression_api.settings
       - key: PYTHON_VERSION
         value: 3.11
